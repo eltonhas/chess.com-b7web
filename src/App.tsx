@@ -13,6 +13,7 @@ export function App() {
   const [currentPage, setCurrentPage] = useState(1)
 
   useEffect(() => {
+    // isMounted flag previne state updates em componente desmontado durante requisição async
     let isMounted = true
 
     const loadStreamers = async () => {

@@ -11,6 +11,7 @@ function isValidUrl(url: string): boolean {
   }
 }
 
+// Type guard que garante type safety após validação de runtime
 function validateStreamer(streamer: unknown): streamer is Streamer {
   if (typeof streamer !== 'object' || streamer === null) {
     return false

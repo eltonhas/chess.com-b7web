@@ -421,12 +421,12 @@ Build final, testes em produção e documentação.
 - Verificar tamanho do bundle (não deve crescer muito)
 
 **Requisitos de Aprovação:**
-- [ ] `npm run build` executa sem erros
-- [ ] Nenhum warning crítico no build
-- [ ] Modo preview funciona (app rodando de arquivos buildados)
-- [ ] Todos os estados (loading, error, success) funcionam em produção
-- [ ] CSS é inlined/importado corretamente (não há FOUC)
-- [ ] Bundle size é razoável (<500KB gzipped para app V1)
+- [x] `npm run build` executa sem erros
+- [x] Nenhum warning crítico no build
+- [x] Modo preview funciona (app rodando de arquivos buildados)
+- [x] Todos os estados (loading, error, success) funcionam em produção
+- [x] CSS é inlined/importado corretamente (não há FOUC)
+- [x] Bundle size é razoável (<500KB gzipped para app V1)
 
 ---
 
@@ -447,11 +447,11 @@ Build final, testes em produção e documentação.
 - Documentar decisões técnicas principais
 
 **Requisitos de Aprovação:**
-- [ ] README.md existe e é claro
-- [ ] Instruções de setup funcionam
-- [ ] Estrutura de pastas documentada
-- [ ] Componentes principais explicados
-- [ ] Nenhum TODOs ou FIXMEs não endereçados
+- [x] README.md existe e é claro
+- [x] Instruções de setup funcionam
+- [x] Estrutura de pastas documentada
+- [x] Componentes principais explicados
+- [x] Nenhum TODOs ou FIXMEs não endereçados
 
 ---
 
@@ -469,12 +469,15 @@ Build final, testes em produção e documentação.
 - Validar que API Chess.com é alcançável a partir de produção (CORS)
 
 **Requisitos de Aprovação:**
-- [ ] App publicada em GitHub Pages
-- [ ] App funciona end-to-end em produção
-- [ ] Teste funcional completo: carregamento, paginação, erros
-- [ ] Nenhum erro de CORS
-- [ ] Performance aceitável (Lighthouse score >80)
-- [ ] GitHub Pages está configurado no repositório settings
+- [x] Infraestrutura de deploy preparada (GitHub Actions workflow)
+- [x] vite.config.ts configurado para GitHub Pages
+- [x] Documentação completa (GITHUB_PAGES_SETUP.md, DEPLOYMENT_CHECKLIST.md)
+- [⏳] App publicada em GitHub Pages (aguardando push para GitHub)
+- [⏳] App funciona end-to-end em produção (será validado após deploy)
+- [⏳] Teste funcional completo (será validado após deploy)
+- [⏳] Nenhum erro de CORS (será validado após deploy)
+- [⏳] Performance aceitável (será validado após deploy)
+- [⏳] GitHub Pages está configurado (usuário deve fazer em Settings)
 
 ---
 

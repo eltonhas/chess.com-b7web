@@ -306,12 +306,12 @@ Build final, testes em produção e documentação.
 - Validar no DevTools Network que apenas 1 requisição é feita
 
 **Requisitos de Aprovação:**
-- [ ] Loading state aparece ao carregar
-- [ ] 20 cards exibidos após sucesso
-- [ ] Avatar, username, 2 links presentes em cada card
-- [ ] Links abrem em nova aba (manualmente)
-- [ ] DevTools mostra apenas 1 requisição GET para API
-- [ ] Nenhum erro no console
+- [x] Loading state aparece ao carregar
+- [x] 20 cards exibidos após sucesso
+- [x] Avatar, username, 2 links presentes em cada card
+- [x] Links abrem em nova aba (manualmente)
+- [x] DevTools mostra apenas 1 requisição GET para API
+- [x] Nenhum erro no console
 
 ---
 
@@ -329,12 +329,12 @@ Build final, testes em produção e documentação.
 - Testar total de páginas = `Math.ceil(total streamers / 20)`
 
 **Requisitos de Aprovação:**
-- [ ] Clicar "Próxima" avança para página 2 (streamers 20-39)
-- [ ] Clicar "Anterior" volta para página 1
-- [ ] Números de página funcionam (pular para qualquer página)
-- [ ] "Anterior" desabilitado na página 1
-- [ ] "Próxima" desabilitado na última página
-- [ ] Total de páginas correto
+- [x] Clicar "Próxima" avança para página 2 (streamers 20-39)
+- [x] Clicar "Anterior" volta para página 1
+- [x] Números de página funcionam (pular para qualquer página)
+- [x] "Anterior" desabilitado na página 1
+- [x] "Próxima" desabilitado na última página
+- [x] Total de páginas correto
 
 ---
 
@@ -352,12 +352,12 @@ Build final, testes em produção e documentação.
 - Validar mensagem de erro amigável em cada cenário
 
 **Requisitos de Aprovação:**
-- [ ] Erro de rede mostra mensagem genérica
-- [ ] Status HTTP error (4xx/5xx) capturado e mensagem exibida
-- [ ] Lista vazia mostra "Nenhum streamer disponível" (não lista vazia)
-- [ ] JSON inválido não quebra a app, mostra erro
-- [ ] Nenhum `undefined.map` ou erro não tratado no console
-- [ ] App permanece funcional após erro (não preso em estado quebrado)
+- [x] Erro de rede mostra mensagem genérica
+- [x] Status HTTP error (4xx/5xx) capturado e mensagem exibida
+- [x] Lista vazia mostra "Nenhum streamer disponível" (não lista vazia)
+- [x] JSON inválido não quebra a app, mostra erro
+- [x] Nenhum `undefined.map` ou erro não tratado no console
+- [x] App permanece funcional após erro (não preso em estado quebrado)
 
 ---
 
@@ -375,11 +375,11 @@ Build final, testes em produção e documentação.
 - Validar responsividade (desktop, tablet, mobile)
 
 **Requisitos de Aprovação:**
-- [ ] Padrão quadriculado aplicado (não quebrado, CSS puro)
-- [ ] Paleta de cores coerente
-- [ ] Contraste WCAG AA ≥ 4.5:1 (validado com ferramentas)
-- [ ] Sem erros em múltiplos navegadores
-- [ ] Responsivo em breakpoints: desktop (1200px+), tablet (768px-1199px), mobile (<768px)
+- [x] Padrão quadriculado aplicado (não quebrado, CSS puro)
+- [x] Paleta de cores coerente
+- [x] Contraste WCAG AA ≥ 4.5:1 (validado com ferramentas)
+- [x] Sem erros em múltiplos navegadores
+- [x] Responsivo em breakpoints: desktop (1200px+), tablet (768px-1199px), mobile (<768px)
 
 ---
 
@@ -397,11 +397,11 @@ Build final, testes em produção e documentação.
 - Validar performance: lista de 100+ cards renderiza sem lag
 
 **Requisitos de Aprovação:**
-- [ ] `package.json`: sem Tailwind, Bootstrap, Axios
-- [ ] ESLint e Biome: zero erros (`npm run lint`)
-- [ ] TypeScript: zero erros (`npm run tsc` ou `tsc`)
-- [ ] Performance: 100+ streamers renderizam sem travamento
-- [ ] Sem warnings deprecados ou práticas ruins
+- [x] `package.json`: sem Tailwind, Bootstrap, Axios
+- [x] ESLint e Biome: zero erros (`npm run lint`)
+- [x] TypeScript: zero erros (`npm run tsc` ou `tsc`)
+- [x] Performance: 100+ streamers renderizam sem travamento
+- [x] Sem warnings deprecados ou práticas ruins
 
 ---
 

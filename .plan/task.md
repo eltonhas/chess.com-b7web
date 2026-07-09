@@ -112,12 +112,12 @@ Build final, testes em produção e documentação.
 - Criar arquivo `StreamerCard.css` com estilos iniciais (sem tema ainda)
 
 **Requisitos de Aprovação:**
-- [ ] Componente renderiza sem erros
-- [ ] Avatar, username e dois links são exibidos
-- [ ] Links abrem em nova aba (verificar manualmente no navegador)
-- [ ] Avatar quebrado mostra fallback/placeholder
-- [ ] Props tipadas corretamente (TypeScript)
-- [ ] ESLint e Biome passam
+- [x] Componente renderiza sem erros
+- [x] Avatar, username e dois links são exibidos
+- [x] Links abrem em nova aba (verificar manualmente no navegador)
+- [x] Avatar quebrado mostra fallback/placeholder
+- [x] Props tipadas corretamente (TypeScript)
+- [x] ESLint e Biome passam
 
 ---
 
@@ -135,11 +135,11 @@ Build final, testes em produção e documentação.
 - Exibir mensagem de erro se `error` estiver preenchido
 
 **Requisitos de Aprovação:**
-- [ ] Componente renderiza a página correta de 20 streamers
-- [ ] Mensagem "Carregando..." aparece enquanto `loading = true`
-- [ ] Mensagem de erro aparece se erro ocorre
-- [ ] Slice de 20 itens está correto (página 1 = 0-19, página 2 = 20-39, etc.)
-- [ ] ESLint e Biome passam
+- [x] Componente renderiza a página correta de 20 streamers
+- [x] Mensagem "Carregando..." aparece enquanto `loading = true`
+- [x] Mensagem de erro aparece se erro ocorre
+- [x] Slice de 20 itens está correto (página 1 = 0-19, página 2 = 20-39, etc.)
+- [x] ESLint e Biome passam
 
 ---
 
@@ -159,13 +159,13 @@ Build final, testes em produção e documentação.
 - Criar arquivo `Pagination.css` com estilos iniciais
 
 **Requisitos de Aprovação:**
-- [ ] Total de páginas calculado corretamente
-- [ ] Botões "Anterior"/"Próxima" funcionam e disparam callback
-- [ ] "Anterior" desabilitado na página 1
-- [ ] "Próxima" desabilitado na última página
-- [ ] Números de página renderizam corretamente
-- [ ] Clicar em número de página atualiza `currentPage`
-- [ ] ESLint e Biome passam
+- [x] Total de páginas calculado corretamente
+- [x] Botões "Anterior"/"Próxima" funcionam e disparam callback
+- [x] "Anterior" desabilitado na página 1
+- [x] "Próxima" desabilitado na última página
+- [x] Números de página renderizam corretamente
+- [x] Clicar em número de página atualiza `currentPage`
+- [x] ESLint e Biome passam
 
 ---
 
@@ -185,12 +185,12 @@ Build final, testes em produção e documentação.
 - Garantir que estado é renderizado corretamente em cada fluxo
 
 **Requisitos de Aprovação:**
-- [ ] Ambos componentes renderizam juntos em `App.tsx`
-- [ ] Trocar de página atualiza `currentPage` e renderiza slice correto
-- [ ] Estados (loading, error, success) refletem corretamente na UI
-- [ ] Ao carregar página, busca é disparada automaticamente
-- [ ] ESLint e Biome passam
-- [ ] Não há memory leaks (useEffect cleanup se necessário)
+- [x] Ambos componentes renderizam juntos em `App.tsx`
+- [x] Trocar de página atualiza `currentPage` e renderiza slice correto
+- [x] Estados (loading, error, success) refletem corretamente na UI
+- [x] Ao carregar página, busca é disparada automaticamente
+- [x] ESLint e Biome passam
+- [x] Não há memory leaks (useEffect cleanup se necessário)
 
 ---
 

@@ -207,11 +207,11 @@ Build final, testes em produção e documentação.
 - Testar cenários: lista vazia, erro de rede, JSON inválido, API fora
 
 **Requisitos de Aprovação:**
-- [ ] Lista vazia mostra mensagem (não lista/paginação vazia)
-- [ ] Durante loading: não renderiza paginação/cards
-- [ ] Durante erro: não renderiza paginação/cards, apenas mensagem
-- [ ] Estados são mutuamente exclusivos (não há UI conflitante)
-- [ ] Testar em DevTools com Network throttling/offline
+- [x] Lista vazia mostra mensagem (não lista/paginação vazia)
+- [x] Durante loading: não renderiza paginação/cards
+- [x] Durante erro: não renderiza paginação/cards, apenas mensagem
+- [x] Estados são mutuamente exclusivos (não há UI conflitante)
+- [x] Testar em DevTools com Network throttling/offline
 
 ---
 

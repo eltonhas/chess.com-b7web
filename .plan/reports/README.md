@@ -14,7 +14,14 @@ Pasta centralizada contendo toda a documentação de relatórios gerados durante
   - Relatório de acessibilidade
 
 ### Melhorias Adicionais (Pós-Fase 5)
-- **[ENHANCED_FEATURES.md](./ENHANCED_FEATURES.md)**
+- **[MUDANCAS_IMPLEMENTADAS.md](./MUDANCAS_IMPLEMENTADAS.md)** - Sumário Executivo
+  - Resumo de todas as mudanças implementadas
+  - Status LIVE em tempo real
+  - Plataformas dinâmicas (Twitch, YouTube)
+  - Badges e animações
+  - Checklist de testes
+
+- **[ENHANCED_FEATURES.md](./ENHANCED_FEATURES.md)** - Detalhes Técnicos
   - Implementação de status LIVE
   - Suporte a múltiplas plataformas
   - Badges de status em tempo real

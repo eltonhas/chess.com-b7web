@@ -29,7 +29,14 @@ Todos os relatórios de progresso e QA:
   - Responsividade
   - Status: ✅ Aprovado
 
-- **[ENHANCED_FEATURES.md](./reports/ENHANCED_FEATURES.md)** - Melhorias Adicionais
+- **[MUDANCAS_IMPLEMENTADAS.md](./reports/MUDANCAS_IMPLEMENTADAS.md)** - Sumário de Mudanças
+  - Visão geral de todas as melhorias
+  - Arquivos modificados (types, components, CSS)
+  - Mudanças visuais e fluxo de dados
+  - Validação e testes
+  - Status: ✅ Implementado
+
+- **[ENHANCED_FEATURES.md](./reports/ENHANCED_FEATURES.md)** - Detalhes Técnicos
   - Status LIVE em tempo real
   - Múltiplas plataformas (Twitch, YouTube)
   - Badges animadas

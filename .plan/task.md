@@ -43,11 +43,11 @@ Build final, testes em produção e documentação.
 - Atualizar `src/App.tsx` com estrutura inicial (useState para streamers, loading, error, currentPage)
 
 **Requisitos de Aprovação:**
-- [ ] Pasta `src/components/` criada
-- [ ] Arquivo `src/types/index.ts` contém type `Streamer` com todos os campos
-- [ ] `App.tsx` possui hooks de estado inicializados corretamente
-- [ ] Nenhum erro de TypeScript (tsc sem warnings)
-- [ ] ESLint e Biome passam sem erros
+- [x] Pasta `src/components/` criada
+- [x] Arquivo `src/types/index.ts` contém type `Streamer` com todos os campos
+- [x] `App.tsx` possui hooks de estado inicializados corretamente
+- [x] Nenhum erro de TypeScript (tsc sem warnings)
+- [x] ESLint e Biome passam sem erros
 
 ---
 
@@ -66,12 +66,12 @@ Build final, testes em produção e documentação.
 - Tratar erros (rede, HTTP, JSON inválido) com mensagem amigável
 
 **Requisitos de Aprovação:**
-- [ ] Requisição para `https://api.chess.com/pub/streamers` funciona e retorna dados
-- [ ] Estado `loading` é `true` durante requisição, `false` ao terminar
-- [ ] Array `streamers` é populado com dados da API após sucesso
-- [ ] Mensagem de erro amigável é exibida em caso de falha
-- [ ] Nenhuma requisição múltipla por carregamento de página (verificar DevTools Network)
-- [ ] ESLint e Biome passam
+- [x] Requisição para `https://api.chess.com/pub/streamers` funciona e retorna dados
+- [x] Estado `loading` é `true` durante requisição, `false` ao terminar
+- [x] Array `streamers` é populado com dados da API após sucesso
+- [x] Mensagem de erro amigável é exibida em caso de falha
+- [x] Nenhuma requisição múltipla por carregamento de página (verificar DevTools Network)
+- [x] ESLint e Biome passam
 
 ---
 
@@ -88,11 +88,11 @@ Build final, testes em produção e documentação.
 - Sanitizar URLs para evitar XSS
 
 **Requisitos de Aprovação:**
-- [ ] Resposta sem campo `streamers` dispara erro tratado
-- [ ] Resposta com `streamers: []` exibe mensagem apropriada (não lista vazia)
-- [ ] Campos obrigatórios são validados antes de renderizar
-- [ ] URLs são tratadas com segurança (evitar injeção de script)
-- [ ] Nenhum `console.error` não tratado chega ao usuário final
+- [x] Resposta sem campo `streamers` dispara erro tratado
+- [x] Resposta com `streamers: []` exibe mensagem apropriada (não lista vazia)
+- [x] Campos obrigatórios são validados antes de renderizar
+- [x] URLs são tratadas com segurança (evitar injeção de script)
+- [x] Nenhum `console.error` não tratado chega ao usuário final
 
 ---
 

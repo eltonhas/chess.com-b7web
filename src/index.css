@@ -1,3 +1,20 @@
+/* Chess Theme: Black & White & Green */
+:root {
+  --chess-black: #1a1a1a;
+  --chess-white: #f5f5f5;
+  --chess-dark-gray: #2d2d2d;
+  --chess-light-gray: #e8e8e8;
+  --chess-green: #2d5016;
+  --chess-green-dark: #1e3510;
+  --chess-green-light: #3d6b1f;
+  --chess-accent: #b8860b;
+  --text-primary: #1a1a1a;
+  --text-secondary: #666666;
+  --border-primary: #1a1a1a;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.2s ease;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -10,8 +27,8 @@ body {
     Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #333;
-  background-color: #fafafa;
+  color: var(--text-primary);
+  background-color: var(--chess-white);
 }
 
 #root {

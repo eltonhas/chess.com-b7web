@@ -1,28 +1,43 @@
+/* Chessboard pattern background - subtle grid effect */
 .app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #fff;
+  background-color: var(--chess-white);
+  background-image:
+    linear-gradient(0deg, transparent 24%, rgba(45, 80, 22, 0.04) 25%, rgba(45, 80, 22, 0.04) 26%, transparent 27%, transparent 74%, rgba(45, 80, 22, 0.04) 75%, rgba(45, 80, 22, 0.04) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(45, 80, 22, 0.04) 25%, rgba(45, 80, 22, 0.04) 26%, transparent 27%, transparent 74%, rgba(45, 80, 22, 0.04) 75%, rgba(45, 80, 22, 0.04) 76%, transparent 77%, transparent);
+  background-size: 60px 60px;
 }
 
 .app__header {
-  background-color: #333;
-  color: #fff;
+  background: linear-gradient(135deg, var(--chess-black) 0%, var(--chess-dark-gray) 100%);
+  color: var(--chess-white);
   padding: 2rem;
   text-align: center;
-  border-bottom: 4px solid #9146ff;
+  border-bottom: 4px solid var(--chess-green);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .app__title {
   margin: 0;
   font-size: 2.5rem;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--chess-white);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .app__main {
   flex: 1;
   padding: 0;
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 3px solid var(--chess-green);
+  outline-offset: 2px;
 }
 
 @media (max-width: 768px) {
@@ -32,6 +47,7 @@
 
   .app__title {
     font-size: 1.75rem;
+    letter-spacing: 1px;
   }
 }
 
@@ -42,5 +58,6 @@
 
   .app__title {
     font-size: 1.5rem;
+    letter-spacing: 0.5px;
   }
 }

@@ -236,12 +236,12 @@ Build final, testes em produção e documentação.
   - Links visualmente distinguíveis como botões
 
 **Requisitos de Aprovação:**
-- [ ] Paleta de cores definida e aplicada
-- [ ] Fundo com padrão quadriculado (CSS puro)
-- [ ] Contraste texto/fundo ≥ 4.5:1 (WCAG AA)
-- [ ] Cards escaneáveis: avatar, username, links visíveis
-- [ ] Nenhuma biblioteca de UI importada (Tailwind, Bootstrap, etc.)
-- [ ] CSS puro em arquivos `.css` por componente
+- [x] Paleta de cores definida e aplicada
+- [x] Fundo com padrão quadriculado (CSS puro)
+- [x] Contraste texto/fundo ≥ 4.5:1 (WCAG AA)
+- [x] Cards escaneáveis: avatar, username, links visíveis
+- [x] Nenhuma biblioteca de UI importada (Tailwind, Bootstrap, etc.)
+- [x] CSS puro em arquivos `.css` por componente
 
 ---
 
@@ -259,12 +259,12 @@ Build final, testes em produção e documentação.
 - Manter coerência visual com tema xadrez
 
 **Requisitos de Aprovação:**
-- [ ] Botões "Anterior"/"Próxima" estilizados
-- [ ] Página ativa é visualmente clara
-- [ ] Botões desabilitados parecem inativos (opacidade, cor)
-- [ ] Hover/focus states aplicados (acessibilidade)
-- [ ] Paleta coerente com tema xadrez
-- [ ] Responsivo em telas pequenas (mobile)
+- [x] Botões "Anterior"/"Próxima" estilizados
+- [x] Página ativa é visualmente clara
+- [x] Botões desabilitados parecem inativos (opacidade, cor)
+- [x] Hover/focus states aplicados (acessibilidade)
+- [x] Paleta coerente com tema xadrez
+- [x] Responsivo em telas pequenas (mobile)
 
 ---
 
@@ -282,11 +282,11 @@ Build final, testes em produção e documentação.
 - Garantir que padrão quadriculado não prejudica legibilidade
 
 **Requisitos de Aprovação:**
-- [ ] Layout não tem inconsistências visuais
-- [ ] Padrão quadriculado não reduz legibilidade
-- [ ] Acessibilidade validada (contraste, tamanho de fonte)
-- [ ] Todos os states visuais (hover, active, disabled) funcionam
-- [ ] Screenshots de múltiplas resoluções sem problemas
+- [x] Layout não tem inconsistências visuais
+- [x] Padrão quadriculado não reduz legibilidade
+- [x] Acessibilidade validada (contraste, tamanho de fonte)
+- [x] Todos os states visuais (hover, active, disabled) funcionam
+- [x] Screenshots de múltiplas resoluções sem problemas
 
 ---
 
@@ -430,30 +430,7 @@ Build final, testes em produção e documentação.
 
 ---
 
-### T7.2: Deploy para GitHub Pages
-
-**Responsável:** DevOps / Frontend Developer  
-**Estimativa:** 0.75h  
-**Prioridade:** P0
-
-**Descrição:**
-- Configurar build para GitHub Pages (base URL correta no vite.config.ts se necessário)
-- Fazer deploy da build usando GitHub Actions ou `gh-pages` package
-- Validar URL final (https://username.github.io/react-firt) funciona
-- Testar em múltiplos navegadores e dispositivos
-- Validar que API Chess.com é alcançável a partir de produção (CORS)
-
-**Requisitos de Aprovação:**
-- [ ] App publicada em GitHub Pages
-- [ ] App funciona end-to-end em produção
-- [ ] Teste funcional completo: carregamento, paginação, erros
-- [ ] Nenhum erro de CORS
-- [ ] Performance aceitável (Lighthouse score >80)
-- [ ] GitHub Pages está configurado no repositório settings
-
----
-
-### T7.3: Documentação e README
+### T7.2: Documentação e README
 
 **Responsável:** Frontend Developer / Tech Writer  
 **Estimativa:** 0.5h  
@@ -475,6 +452,29 @@ Build final, testes em produção e documentação.
 - [ ] Estrutura de pastas documentada
 - [ ] Componentes principais explicados
 - [ ] Nenhum TODOs ou FIXMEs não endereçados
+
+---
+
+### T7.3: Deploy para GitHub Pages
+
+**Responsável:** DevOps / Frontend Developer  
+**Estimativa:** 0.75h  
+**Prioridade:** P0
+
+**Descrição:**
+- Configurar build para GitHub Pages (base URL correta no vite.config.ts se necessário)
+- Fazer deploy da build usando GitHub Actions ou `gh-pages` package
+- Validar URL final (https://username.github.io/react-firt) funciona
+- Testar em múltiplos navegadores e dispositivos
+- Validar que API Chess.com é alcançável a partir de produção (CORS)
+
+**Requisitos de Aprovação:**
+- [ ] App publicada em GitHub Pages
+- [ ] App funciona end-to-end em produção
+- [ ] Teste funcional completo: carregamento, paginação, erros
+- [ ] Nenhum erro de CORS
+- [ ] Performance aceitável (Lighthouse score >80)
+- [ ] GitHub Pages está configurado no repositório settings
 
 ---
 
@@ -500,6 +500,41 @@ Build final, testes em produção e documentação.
 - [ ] Apenas 1 requisição por carregamento de página (verificado em DevTools)
 - [ ] Build (`npm run build`) funciona sem erros
 - [ ] App funciona end-to-end em produção
+
+---
+
+## 3.1 Melhorias Adicionais Implementadas
+
+### Status LIVE e Plataformas Dinâmicas (Pós-Fase 5)
+
+Após a conclusão da Fase 5, foram implementadas melhorias adicionais baseadas na estrutura completa da API:
+
+**Mudanças:**
+- ✅ Atualizado tipo `Streamer` em `src/types/index.ts` com novos campos:
+  - `is_live: boolean` — streamer ao vivo em qualquer plataforma
+  - `platforms: Platform[]` — array de plataformas (Twitch, YouTube)
+- ✅ Aprimorado componente `StreamerCard.tsx`:
+  - Badge "🔴 LIVE" no avatar quando ao vivo
+  - Links dinâmicos renderizados a partir do array platforms
+  - Badge 🔴 individual por plataforma que está ao vivo
+  - Cores temáticas por plataforma (Twitch: roxo, YouTube: vermelho)
+- ✅ Estilização nova em `StreamerCard.css`:
+  - `.streamer-card--live` para destaque
+  - `.streamer-card__live-badge` com animação pulse
+  - Suporte a múltiplas plataformas
+- ✅ Documentação atualizada em `.plan/braim-dump.md`:
+  - Estrutura JSON completa da API
+  - Novos campos explicados
+
+**Documentação:**
+- 📄 `ENHANCED_FEATURES.md` — Detalhes completos das melhorias
+- 📄 `FASE5_REPORT.md` — Relatório da Fase 5
+
+**Validação:**
+- ✅ TypeScript: 0 erros
+- ✅ ESLint: 0 erros
+- ✅ Build: 171ms, sem erros
+- ✅ Bundle size impact: negligível (+0.33 kB gzip)
 
 ---
 

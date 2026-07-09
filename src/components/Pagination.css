@@ -1,37 +1,49 @@
+/* T5.2: Pagination styling with chess theme */
 .pagination {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
   padding: 2rem;
-  background-color: #f9f9f9;
-  border-top: 2px solid #333;
+  background-color: var(--chess-light-gray);
+  border-top: 3px solid var(--chess-black);
+  box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .pagination__button {
-  padding: 0.75rem 1.5rem;
-  border: 2px solid #333;
-  background-color: #fff;
-  color: #333;
+  padding: 0.875rem 1.75rem;
+  border: 2px solid var(--chess-black);
+  background-color: var(--chess-white);
+  color: var(--chess-black);
   font-weight: 600;
   font-size: 1rem;
   border-radius: 4px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all var(--transition-normal);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .pagination__button:hover:not(:disabled) {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--chess-black);
+  color: var(--chess-white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pagination__button:focus {
+  outline: 2px solid var(--chess-green);
+  outline-offset: 2px;
 }
 
 .pagination__button:disabled {
-  opacity: 0.5;
+  opacity: 0.45;
   cursor: not-allowed;
+  background-color: var(--chess-light-gray);
 }
 
 .pagination__button:active:not(:disabled) {
-  transform: scale(0.98);
+  transform: scale(0.96);
 }
 
 .pagination__numbers {
@@ -42,62 +54,80 @@
 }
 
 .pagination__page {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   padding: 0;
-  border: 2px solid #333;
-  background-color: #fff;
-  color: #333;
+  border: 2px solid var(--chess-black);
+  background-color: var(--chess-white);
+  color: var(--chess-black);
   font-weight: 600;
   border-radius: 4px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
+  transition: all var(--transition-normal);
   font-size: 0.95rem;
 }
 
 .pagination__page:hover:not(:disabled) {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--chess-black);
+  color: var(--chess-white);
+  transform: translateY(-2px);
+}
+
+.pagination__page:focus {
+  outline: 2px solid var(--chess-green);
+  outline-offset: 2px;
 }
 
 .pagination__page:disabled {
-  opacity: 0.5;
+  opacity: 0.45;
   cursor: not-allowed;
+  background-color: var(--chess-light-gray);
 }
 
+/* Active page indicator - chess green highlight */
 .pagination__page--active {
-  background-color: #333;
-  color: #fff;
-  border-color: #333;
+  background-color: var(--chess-green);
+  color: var(--chess-white);
+  border-color: var(--chess-green);
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(45, 80, 22, 0.3);
+}
+
+.pagination__page--active:hover {
+  background-color: var(--chess-green-dark);
+  border-color: var(--chess-green-dark);
 }
 
 .pagination__page--active:disabled {
   opacity: 1;
+  background-color: var(--chess-green);
 }
 
 .pagination__page:active:not(:disabled) {
-  transform: scale(0.95);
+  transform: scale(0.94);
 }
 
 .pagination__ellipsis {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #666;
+  color: var(--text-secondary);
   font-weight: 600;
 }
 
 .pagination__info {
   font-size: 0.95rem;
-  color: #666;
+  color: var(--text-secondary);
   font-weight: 500;
+  text-align: center;
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .pagination {
     padding: 1.5rem;
@@ -105,19 +135,19 @@
   }
 
   .pagination__button {
-    padding: 0.625rem 1.25rem;
+    padding: 0.75rem 1.5rem;
     font-size: 0.95rem;
   }
 
   .pagination__page {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     font-size: 0.9rem;
   }
 
   .pagination__ellipsis {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -128,7 +158,7 @@
   }
 
   .pagination__button {
-    padding: 0.5rem 1rem;
+    padding: 0.625rem 1.25rem;
     font-size: 0.9rem;
   }
 
@@ -137,15 +167,15 @@
   }
 
   .pagination__page {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
     font-size: 0.85rem;
   }
 
   .pagination__ellipsis {
-    width: 32px;
-    height: 32px;
-    font-size: 0.9rem;
+    width: 36px;
+    height: 36px;
+    font-size: 0.85rem;
   }
 
   .pagination__info {

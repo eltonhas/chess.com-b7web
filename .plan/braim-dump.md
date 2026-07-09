@@ -13,15 +13,31 @@ Aplicação web em React que consome a API pública do Chess.com para listar str
 
 Endpoint: `https://api.chess.com/pub/streamers`
 
-Formato de resposta:
+Formato de resposta completo:
 ```json
 {
   "streamers": [
     {
-      "username": "string",
-      "avatar": "URL",
-      "twitch_url": "URL da Twitch",
-      "url": "URL do perfil no Chess.com"
+      "username": "Witty_Alien",
+      "avatar": "https://images.chesscomfiles.com/uploads/v1/user/24250668.edaa550e.50x50o.adf21fb42a9e.png",
+      "twitch_url": "https://twitch.tv/witty_alien",
+      "url": "https://www.chess.com/member/Witty_Alien",
+      "is_live": true,
+      "is_community_streamer": false,
+      "platforms": [
+        {
+          "type": "twitch",
+          "stream_url": "https://twitch.tv/witty_alien",
+          "channel_url": "https://twitch.tv/witty_alien",
+          "is_live": true,
+          "is_main_live_platform": true
+        },
+        {
+          "type": "youtube",
+          "channel_url": "https://youtube.com/@witty_alienclips",
+          "is_live": false
+        }
+      ]
     }
   ]
 }
@@ -31,7 +47,16 @@ Observações importantes sobre a API:
 - Não exige autenticação.
 - Não possui paginação — retorna a lista inteira de uma vez.
 - Dados atualizados a cada ~5 minutos no servidor do Chess.com.
-- Só entrega esses 4 campos — não há bio, seguidores, nem status "ao vivo agora".
+- Campos principais:
+  - `username`, `avatar`, `twitch_url`, `url` — campos básicos do streamer
+  - `is_live` — boolean indicando se o streamer está ao vivo em qualquer plataforma
+  - `is_community_streamer` — boolean (pode ser ignorado no MVP)
+  - `platforms` — array com detalhes de cada plataforma (twitch, youtube, etc)
+    - `type` — tipo de plataforma ('twitch', 'youtube', etc)
+    - `stream_url` — URL da transmissão ao vivo (se disponível)
+    - `channel_url` — URL do canal/perfil na plataforma
+    - `is_live` — boolean indicando se está ao vivo nessa plataforma específica
+    - `is_main_live_platform` — boolean indicando a plataforma principal (optional)
 
 ## Escopo da V1 (MVP)
 
@@ -42,8 +67,11 @@ Observações importantes sobre a API:
 4. Renderizar um card para cada streamer contendo:
    - Avatar
    - Username
-   - Link para o canal na Twitch
-   - Link para o perfil no Chess.com
+   - **Badge "🔴 LIVE"** se o streamer está ao vivo em qualquer plataforma
+   - Links dinâmicos para cada plataforma com indicador de transmissão ao vivo:
+     - **Twitch** (roxo) — com badge 🔴 se está ao vivo
+     - **YouTube** (vermelho) — com badge 🔴 se está ao vivo (se disponível)
+   - **Link para perfil no Chess.com** (verde)
 5. Paginação simples: exibir 20 streamers por página, com navegação entre páginas (ex: botões "Anterior" / "Próxima" ou números de página).
    - Como a API não pagina os dados (retorna a lista inteira de uma vez), a paginação será feita no client — a lista completa é buscada uma vez e depois "fatiada" em blocos de 20 conforme a página atual.
 
